@@ -19,9 +19,9 @@
 </head>
 <body class="font-custom">
     <section class="w-full h-screen bg-black flex items-center ">
-      <div class="w-full md:w-10/12 lg:w-8/12 mx-auto" data-aos="fade-up" data-aos-duration="2000">
+      <div class="w-full md:w-10/12 lg:w-8/12 mx-auto">
         <h1 class="text-5xl font-bold text-center text-white"><u class="underline-offset-4">Hi</u>lman.js</h1>
-        <p class="text-5xl font-bold text-center text-white pt-5">I'm <span class="bg-gradient-to-r from-cyan-500 to-blue-500 bg-clip-text text-transparent animate-spin">Backend Coders</span></p>
+        <p class="text-5xl font-bold text-center text-white pt-5">I'm <span class="bg-gradient-to-r from-cyan-500 to-blue-500 bg-clip-text text-transparent auto-typed"></span></p>
       </div>
     </section>
     <section class="p-4 flex items-center h-screen bg-white">
@@ -93,6 +93,7 @@
   <footer class="h-32 mx-auto bg-white">
     <h1 class="text-center text-black pt-14 text-1xl font-bold">Made With 💙 By <a href="https://github.com/hilmanXcode" class="bg-gradient-to-r from-cyan-500 to-blue-500 bg-clip-text text-transparent" target="_blank">hilmanXcode</a></h1>
   </footer>
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
   <script>
     const move = () => {
       window.open("https://github.com/hilmanXcode/belajar-crud-php");
@@ -106,6 +107,12 @@
     const contact = () => {
       window.open("https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=hilmanxcode@gmail.com");
     }
+    var typed = new Typed(".auto-typed", {
+      strings: ["Backend Coders", "Live At Indonesian"],
+      typeSpeed: 60,
+      backSpeed: 60,
+      loop: false
+    })
   </script>
 </body>
 </html>
