@@ -48,7 +48,7 @@
   </section>
 
   <div class="container mx-auto h-96 p-5">
-    <div class="md:max-w-4xl w-full h-full rounded-lg shadow-xl mx-auto">
+    <div class="md:max-w-4xl border-2 w-full h-full rounded-lg shadow-xl mx-auto">
       <h1 class="font-bold text-2xl text-center pt-2">I've Currently Used</h1>
       <div class="mt-7 p-3 w-full mx-auto grid grid-cols-12">
         <div data-aos-duration="1000" data-aos="fade-right" class="h-20 space-x-2 ml-2 mt-2 col-span-6 bg-[#8cc84b] border-2 border-slate-500">
@@ -78,9 +78,20 @@
       </div>  
     </div>
   </div>
+
+  <div class="h-screen w-full bg-black flex">
+    <div class="mt-36 mx-auto">
+      <img src="./images/codex.png" class="mx-auto md:hidden" alt="Code" height="200" width="200">
+      <img src="./images/codex.png" class="mx-auto hidden md:block" alt="Code" height="300" width="300">
+      <h1 class="font-bold text-white text-2xl md:text-5xl">Want To Collaborate With Me ?</h1>
+      <div class="hover:cursor-pointer border-2 md:px-10 md:py-3 border-sky-500 px-5 py-2 mt-6 ml-[115px] md:ml-[275px] inline-block hover:scale-105 hover:shadow-2xl hover:shadow-sky-500 transition" onclick="contact()">
+        <a href="#" class="font-bold text-white">Contact Me</a>
+      </div>
+    </div>
+  </div>
   
-  <footer class="h-32 mx-auto bg-black">
-    <h1 class="text-center text-white pt-14 text-1xl font-bold">Made With 💙 By <a href="https://github.com/hilmanXcode" class="bg-gradient-to-r from-cyan-500 to-blue-500 bg-clip-text text-transparent" target="_blank">hilmanXcode</a></h1>
+  <footer class="h-32 mx-auto bg-white">
+    <h1 class="text-center text-black pt-14 text-1xl font-bold">Made With 💙 By <a href="https://github.com/hilmanXcode" class="bg-gradient-to-r from-cyan-500 to-blue-500 bg-clip-text text-transparent" target="_blank">hilmanXcode</a></h1>
   </footer>
   <script>
     const move = () => {
@@ -90,6 +101,11 @@
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
     AOS.init();
+  </script>
+  <script>
+    const contact = () => {
+      window.open("https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=hilmanxcode@gmail.com");
+    }
   </script>
 </body>
 </html>
