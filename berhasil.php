@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Berhasil</title>
+    <style>
+        body {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        .head {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .box1 {
+            width: 900px;
+            height: auto;
+            border-style: solid;
+            text-align: center;
+        }
+        .text-center {
+            text-align: center;
+        }
+        .box2 {
+            width: 500px;
+            height: 200px;
+            border-style: solid;
+            border-top: none;
+            text-align: center;
+        }
+        .box3 {
+            width: 197px;
+            height: 200px;
+            border-style: solid;
+            border-top: none;
+            border-left: none;
+        }
+        .box4 {
+            width: 197px;
+            height: 200px;
+            border-style: solid;
+            border-top: none;
+            border-left: none;
+        }
+        .mt-5 {
+            margin-top: 5rem;
+        }
+    </style>
+</head>
+<body>
+<h1 class="text-center">Bukti Pendaftaran BLK</h1>
+    <div class="head">  
+        <div class="box1">
+            <h4>Berikut adalah data yang sudah kami terima : </h4>
+        </div>
+    </div>
+    <div class="body">
+        <div class="box2">
+            <h4 class="mt-5">Nama : jajang</h4>
+        </div>
+        <div class="box3">
+            <img src="berkas/3491a9e0dab90a8630efa4fa77b605bf-nature-2689716_960_720 (1).jpg" alt="" width="197" height="200">
+        </div>
+        <div class="box4">
+            <img src="berkas/3491a9e0dab90a8630efa4fa77b605bf-nature-2689716_960_720 (1).jpg" alt="" width="197" height="200">
+        </div>
+    </div>
+</body>
+</html>
