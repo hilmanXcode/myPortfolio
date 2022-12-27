@@ -547,6 +547,10 @@ video {
   }
 }
 
+.invisible {
+  visibility: hidden;
+}
+
 .absolute {
   position: absolute;
 }
@@ -560,10 +564,6 @@ video {
   right: 0px;
   bottom: 0px;
   left: 0px;
-}
-
-.z-10 {
-  z-index: 10;
 }
 
 .col-span-6 {
@@ -628,42 +628,6 @@ video {
   margin-top: 2.5rem;
 }
 
-.ml-10 {
-  margin-left: 2.5rem;
-}
-
-.ml-52 {
-  margin-left: 13rem;
-}
-
-.ml-60 {
-  margin-left: 15rem;
-}
-
-.ml-72 {
-  margin-left: 18rem;
-}
-
-.-ml-96 {
-  margin-left: -24rem;
-}
-
-.ml-96 {
-  margin-left: 24rem;
-}
-
-.ml-\[400px\] {
-  margin-left: 400px;
-}
-
-.ml-\[500px\] {
-  margin-left: 500px;
-}
-
-.ml-\[700px\] {
-  margin-left: 700px;
-}
-
 .inline-block {
   display: inline-block;
 }
@@ -682,6 +646,10 @@ video {
 
 .aspect-video {
   aspect-ratio: 16 / 9;
+}
+
+.aspect-\[4\/3\] {
+  aspect-ratio: 4/3;
 }
 
 .h-screen {
@@ -718,10 +686,6 @@ video {
 
 .w-64 {
   width: 16rem;
-}
-
-.w-auto {
-  width: auto;
 }
 
 .shrink-0 {
@@ -807,12 +771,21 @@ video {
   background-color: rgb(226 43 35 / var(--tw-bg-opacity));
 }
 
+.bg-blue-500 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(59 130 246 / var(--tw-bg-opacity));
+}
+
 .bg-gradient-to-r {
   background-image: linear-gradient(to right, var(--tw-gradient-stops));
 }
 
 .bg-gradient-to-tr {
   background-image: linear-gradient(to top right, var(--tw-gradient-stops));
+}
+
+.bg-\[url\(\'\.\.\/img\/1\.jpg\'\)\] {
+  background-image: url('../img/1.jpg');
 }
 
 .from-cyan-500 {
@@ -825,9 +798,17 @@ video {
   --tw-gradient-to: #3b82f6;
 }
 
+.bg-cover {
+  background-size: cover;
+}
+
 .bg-clip-text {
   -webkit-background-clip: text;
           background-clip: text;
+}
+
+.bg-center {
+  background-position: center;
 }
 
 .p-4 {
@@ -970,10 +951,6 @@ video {
   text-underline-offset: 4px;
 }
 
-.opacity-0 {
-  opacity: 0;
-}
-
 .shadow-xl {
   --tw-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
   --tw-shadow-colored: 0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);
@@ -996,6 +973,10 @@ video {
 
 .duration-300 {
   transition-duration: 300ms;
+}
+
+.duration-500 {
+  transition-duration: 500ms;
 }
 
 .hover\:rotate-3:hover {
@@ -1030,12 +1011,36 @@ video {
   --tw-shadow: var(--tw-shadow-colored);
 }
 
-.group:hover .group-hover\:hidden {
-  display: none;
+.group:hover .group-hover\:visible {
+  visibility: visible;
 }
 
-.group:hover .group-hover\:opacity-100 {
-  opacity: 1;
+.group:hover .group-hover\:rotate-12 {
+  --tw-rotate: 12deg;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.group:hover .group-hover\:rotate-6 {
+  --tw-rotate: 6deg;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.group:hover .group-hover\:scale-125 {
+  --tw-scale-x: 1.25;
+  --tw-scale-y: 1.25;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.group:hover .group-hover\:scale-100 {
+  --tw-scale-x: 1;
+  --tw-scale-y: 1;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.group:hover .group-hover\:scale-110 {
+  --tw-scale-x: 1.1;
+  --tw-scale-y: 1.1;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
 @media (min-width: 640px) {
@@ -1064,6 +1069,10 @@ video {
 
   .md\:hidden {
     display: none;
+  }
+
+  .md\:aspect-\[3\/4\] {
+    aspect-ratio: 3/4;
   }
 
   .md\:w-10\/12 {
@@ -1103,10 +1112,6 @@ video {
     display: block;
   }
 
-  .lg\:flex {
-    display: flex;
-  }
-
   .lg\:hidden {
     display: none;
   }
@@ -1121,20 +1126,8 @@ video {
 }
 
 @media (min-width: 1280px) {
-  .xl\:float-right {
-    float: right;
-  }
-
-  .xl\:float-left {
-    float: left;
-  }
-
-  .xl\:flex {
-    display: flex;
-  }
-
-  .xl\:justify-end {
-    justify-content: flex-end;
+  .xl\:aspect-\[4\/3\] {
+    aspect-ratio: 4/3;
   }
 
   .xl\:p-24 {
