@@ -37,6 +37,17 @@
         <h1 class="text-3xl text-white font-bold">My Recently Project's</h1>
         <p class="font-light text-white mt-1.5">What I do in programming hell</p>
         <div class="space-x-3 overflow-x-auto no-scrollbar flex items-center py-4">
+          <div class="hover:scale-95 transition-all shrink-0 flex flex-col justify-end bg-gradient-to-tr font-bold text-black w-64 aspect-video relative overflow-hidden duration-500 group rounded-lg" onclick="move(3)">
+            <img src="./images/sipp.PNG" class="absolute inset-0 group-hover:scale-110 group-hover:rotate-6 transition-all duration-500" />
+            <div class="relative invisible group-hover:visible">
+              <h1 class="px-4 text-lg font-bold">SI-PP <span class="text-sm text-slate-700 font-bold">#Released</span></h1>
+              <p class="px-4 pb-4 text-sm font-light">simple employee management system with php native</p>
+              
+            </div>
+
+              
+          </div>
+          
           <div class="hover:scale-95 transition-all shrink-0 flex flex-col justify-end bg-gradient-to-tr font-bold text-black w-64 aspect-video relative overflow-hidden duration-500 group rounded-lg" onclick="move(1)">
             <img src="./images/apoteker.JPG" class="absolute inset-0 group-hover:scale-110 group-hover:rotate-6 transition-all duration-500" />
             <div class="relative invisible group-hover:visible">
@@ -57,6 +68,8 @@
 
               
           </div>
+
+          
         </div>
       </div>
     </section>
@@ -133,6 +146,9 @@
         }
         else if(n === 2){
           window.open("https://github.com/hilmanXcode/PPDB-APP");
+        }
+        else if(n === 3){
+          window.open("https://github.com/hilmanXcode/SI-PP");
         }
       };
     </script>
