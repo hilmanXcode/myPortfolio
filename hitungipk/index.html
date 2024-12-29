@@ -174,9 +174,16 @@
 
             // console.log(parseFloat(IPK));
             // console.log(parseFloat(filteredIpk));
-
-            ipk.innerHTML += `IPK(LONG FLOAT): ${parseFloat(IPK)}`;
-            ipkfiltered.innerHTML += `IPK(FILTERED): ${filteredIpk}`;
+            // console.log(IPK);
+            // console.log(isNaN(IPK))
+            if(isNaN(IPK)){
+                // console.log('masuk sini ey')
+                alert('Silahkan isi semua form, dan untuk 0 mohon di isi dengan 0.00, contoh 0.90, 1.00 dan seterusnya');
+            }
+            else {
+                ipk.innerHTML += `IPK(LONG FLOAT): ${parseFloat(IPK)}`;
+                ipkfiltered.innerHTML += `IPK(FILTERED): ${filteredIpk}`;
+            }
 
 
         }
@@ -214,10 +221,11 @@
                 // console.log("D");
                 return 1.00;
             }
-            else if(totalNilai > 0 && totalNilai < 40.01){
+            else if(totalNilai >= 0 && totalNilai < 40.01){
                 // console.log("E");
                 return 0;
             }
+            // else if()
         }
 
     </script>
