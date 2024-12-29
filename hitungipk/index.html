@@ -151,6 +151,9 @@
 
             let ipk = document.getElementById("ipk");
             let ipkfiltered = document.getElementById("ipkfiltered");
+
+            ipk.innerHTML = ``;
+            ipkfiltered.innerHTML = ``;
             
             let mutuAlgoritma = cekMutu(parseFloat(algoritma[0].value) + parseFloat(algoritma[1].value) + parseFloat(algoritma[2].value) + parseFloat(algoritma2[0].value) + parseFloat(algoritma2[1].value)) * 3; // 3 sks
             let mutuBahasaIndonesia = cekMutu(parseFloat(bahasaindonesia[0].value) + parseFloat(bahasaindonesia[1].value) + parseFloat(bahasaindonesia[2].value)) * 2; // 2 sks
