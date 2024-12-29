@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hitung IPK S1 Informatika</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: "Inter", serif;
+        }
+        .headline-text {
+            text-align: center;
+            font-weight: 800;
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        .text-mapel {
+            text-align: center;
+            font-weight: 600;
+            font-size: 25px;
+        }
+        .input-wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 10px;
+        }
+        .input-wrapper input {
+            width: 100%;
+            padding-top: 8px;
+            padding-bottom: 8px;
+            border-radius: 5px;
+            border: none;
+            border: 2px solid black;
+        }
+        .button {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            background-color: black;
+            color: white;
+            border-radius: 5px;
+            font-weight: 600;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div>
+            <h1 class="headline-text">Hitung IPK Mu Yuk!</h1>
+            <div class="mapel-wrapper">
+                
+                <h3 class="text-mapel">Algoritma</h3>
+                <div class="input-wrapper" id="algoritma">
+                <input type="number" placeholder="Final Examination (P)">
+                <input type="number" placeholder="Final Examination (T)">
+                <input type="number" placeholder="Individual Assignment">
+            </div>
+            <div class="input-wrapper" id="algoritma2">
+                <input type="number" placeholder="Mid Examination (P)">
+                <input type="number" placeholder="Mid Examination (T)">
+            </div>
+        </div>
+        <div class="mapel-wrapper">
+
+            <h3 class="text-mapel">Bahasa Indonesia</h3>
+            <div class="input-wrapper" id="bahasaindonesia">
+                <input type="number" placeholder="Final Examination">
+                <input type="number" placeholder="Individual Assignment">
+                <input type="number" placeholder="Mid Examination">
+            </div>
+            
+        </div>
+
+        <div class="mapel-wrapper">
+
+            <h3 class="text-mapel">GWEP</h3>
+            <div class="input-wrapper" id="gwep">
+                <input type="number" placeholder="Final Examination">
+                <input type="number" placeholder="Individual Assignment">
+                <input type="number" placeholder="Mid Examination">
+            </div>
+
+        </div>
+
+        <div class="mapel-wrapper">
+
+            <h3 class="text-mapel">Kalkulus</h3>
+            <div class="input-wrapper" id="kalkulus">
+                <input type="number" placeholder="Final Examination">
+                <input type="number" placeholder="Individual Assignment">
+                <input type="number" placeholder="Mid Examination">
+            </div>
+
+        </div>
+
+        <div class="mapel-wrapper">
+
+            <h3 class="text-mapel">Pemrograman Berorientasi Objek Java 1</h3>
+            <div class="input-wrapper" id="pbo">
+                <input type="number" placeholder="Final Examination (P)">
+                <input type="number" placeholder="Final Examination (T)">
+                <input type="number" placeholder="Individual Assignment">
+            </div>
+            <div class="input-wrapper" id="pbo2">
+                <input type="number" placeholder="Mid Examination (P)">
+                <input type="number" placeholder="Mid Examination (T)">
+            </div>
+        </div>
+
+        <div class="mapel-wrapper">
+
+            <h3 class="text-mapel">Pemrograman Dasar</h3>
+            <div class="input-wrapper" id="progdas">
+                <input type="number" placeholder="Final Examination (P)">
+                <input type="number" placeholder="Final Examination (T)">
+                <input type="number" placeholder="Individual Assignment">
+            </div>
+            <div class="input-wrapper" id="progdas2">
+                <input type="number" placeholder="Mid Examination (P)">
+                <input type="number" placeholder="Mid Examination (T)">
+            </div>
+        </div>
+
+        <button class="button" onclick="hitungIPK()">Kalkulasi IPK</button>
+
+        <h1 id="ipk"></h1>
+        <h1 id="ipkfiltered"></h1>
+        </div>
+    </div>
+    <script>
+        function hitungIPK(){
+            let algoritma = document.getElementById("algoritma").getElementsByTagName("input");
+            let algoritma2 = document.getElementById("algoritma2").getElementsByTagName("input");
+            let bahasaindonesia = document.getElementById("bahasaindonesia").getElementsByTagName("input");
+            let gwep = document.getElementById("gwep").getElementsByTagName("input");
+            let kalkulus = document.getElementById("kalkulus").getElementsByTagName("input");
+            let pbo = document.getElementById("pbo").getElementsByTagName("input");
+            let pbo2 = document.getElementById("pbo2").getElementsByTagName("input");
+            let progdas = document.getElementById("progdas").getElementsByTagName("input");
+            let progdas2 = document.getElementById("progdas2").getElementsByTagName("input");
+
+            let ipk = document.getElementById("ipk");
+            let ipkfiltered = document.getElementById("ipkfiltered");
+            
+            let mutuAlgoritma = cekMutu(parseFloat(algoritma[0].value) + parseFloat(algoritma[1].value) + parseFloat(algoritma[2].value) + parseFloat(algoritma2[0].value) + parseFloat(algoritma2[1].value)) * 3; // 3 sks
+            let mutuBahasaIndonesia = cekMutu(parseFloat(bahasaindonesia[0].value) + parseFloat(bahasaindonesia[1].value) + parseFloat(bahasaindonesia[2].value)) * 2; // 2 sks
+            let mutuGwep = cekMutu(parseFloat(gwep[0].value) + parseFloat(gwep[1].value) + parseFloat(gwep[2].value)) * 4 ; // 4 sks
+            let mutuKalkulus = cekMutu(parseFloat(kalkulus[0].value) + parseFloat(kalkulus[1].value) + parseFloat(kalkulus[2].value)) * 2 ; // 2 sks
+            let mutuPbo = cekMutu(parseFloat(pbo[0].value) + parseFloat(pbo[1].value) + parseFloat(pbo[2].value) + parseFloat(pbo2[0].value) + parseFloat(pbo2[1].value)) * 3; // 3 sks
+            let mutuProgdas = cekMutu(parseFloat(progdas[0].value) + parseFloat(progdas[1].value) + parseFloat(progdas[2].value) + parseFloat(progdas2[0].value) + parseFloat(progdas2[1].value)) * 3; // 3 sks
+
+            // let totalAlgo = parseFloat(algoritma[0].value) + parseFloat(algoritma[1].value);
+
+            // console.log(cekMutu(parseFloat(algoritma[0].value) + parseFloat(algoritma[1].value) + parseFloat(algoritma[2].value) + parseFloat(algoritma2[0].value) + parseFloat(algoritma2[1].value)) * 3);
+
+            let IPK = (parseFloat(mutuAlgoritma) + parseFloat(mutuBahasaIndonesia) + parseFloat(mutuGwep) + parseFloat(mutuKalkulus) + parseFloat(mutuPbo) + parseFloat(mutuProgdas)) / 17; // Total 17 SKS
+
+            let stringIpk = IPK.toString();
+
+            let filteredIpk = stringIpk[0] + stringIpk[1] + stringIpk[2] + stringIpk[3];
+
+            // console.log(parseFloat(IPK));
+            // console.log(parseFloat(filteredIpk));
+
+            ipk.innerHTML += `IPK(LONG FLOAT): ${parseFloat(IPK)}`;
+            ipkfiltered.innerHTML += `IPK(FILTERED): ${filteredIpk}`;
+
+
+        }
+
+        function cekMutu(totalNilai){
+            if(totalNilai > 85.00){
+                // console.log("A");
+                return 4.00;
+            }
+            else if(totalNilai > 80.00 && totalNilai < 85.01){
+                // console.log("A-")
+                return 3.70;
+            }
+            else if(totalNilai > 75.00 && totalNilai < 80.01){
+                // console.log("B+")
+                return 3.30;
+            }
+            else if(totalNilai > 70.00 && totalNilai < 75.01){
+                // console.log("B");
+                return 3.00;
+            }
+            else if(totalNilai > 65.00 && totalNilai < 70.01){
+                // console.log("B-");
+                return 2.70;
+            }
+            else if(totalNilai > 60.00 && totalNilai < 65.01){
+                // console.log("C+");
+                return 2.30;
+            }
+            else if(totalNilai > 50.00 && totalNilai < 60.01){
+                // console.log("C");
+                return 2.00;
+            }
+            else if(totalNilai > 40.00 && totalNilai < 50.01){
+                // console.log("D");
+                return 1.00;
+            }
+            else if(totalNilai > 0 && totalNilai < 40.01){
+                // console.log("E");
+                return 0;
+            }
+        }
+
+    </script>
+</body>
+</html>
