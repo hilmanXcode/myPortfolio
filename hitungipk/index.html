@@ -170,7 +170,7 @@
 
             let stringIpk = IPK.toString();
 
-            let filteredIpk = stringIpk[0] + stringIpk[1] + stringIpk[2] + stringIpk[3];
+            let filteredIpk = stringIpk[0] + (stringIpk[1] == undefined ? '' : stringIpk[1]) + (stringIpk[2] == undefined ? '' : stringIpk[2]) + (stringIpk[3] == undefined ? '' : stringIpk[3]);
 
             // console.log(parseFloat(IPK));
             // console.log(parseFloat(filteredIpk));
